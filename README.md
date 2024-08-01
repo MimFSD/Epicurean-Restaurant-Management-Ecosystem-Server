@@ -1,0 +1,1 @@
+The Epicurean-Restaurant-Management-Ecosystem-Server is the backend server component of the comprehensive restaurant management system, built using the MERN stack. This server handles all business logic, data management, and API services required for efficient restaurant operations.
