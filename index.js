@@ -93,7 +93,7 @@ async function run() {
             const userData = await buyDB.insertOne(data)
             res.send(userData);
         }) 
-        
+
         app.get('/my-order/:email', verify, async (req, res) => {
             const email = req.params.email
 
@@ -195,7 +195,7 @@ async function run() {
             const result = await feedbackDB.find().toArray();
             res.send(result)
         })
-        //gallery
+                            //gallery
         app.post('/gallery', async (req, res) => {
             const newFood = req.body;
             console.log(newFood);
