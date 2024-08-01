@@ -50,7 +50,11 @@ const client = new MongoClient(uri, {
     }
 });
 
+
+
+
 async function run() {
+
     // Connect to the MongoDB cluster
    
     try {
@@ -75,6 +79,8 @@ async function run() {
             const result = await restaurantDB.findOne(query);
             res.send(result);
         }) 
+
+
         app.post('/user', async (req, res) => {
             const email = req.body;
             console.log(email);
@@ -87,6 +93,7 @@ async function run() {
             const userData = await buyDB.insertOne(data)
             res.send(userData);
         }) 
+        
         app.get('/my-order/:email', verify, async (req, res) => {
             const email = req.params.email
 
