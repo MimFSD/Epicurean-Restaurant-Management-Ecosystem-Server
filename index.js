@@ -208,7 +208,8 @@ async function run() {
             res.send(result)
         }) 
 
-                            // jwt 
+                    
+                   // jwt 
         app.post('/jwt', async (req, res) => {
             const email = req.body;
             const token = jwt.sign(email, process.env.SECRET_KEY, { expiresIn: '1h' }) 
