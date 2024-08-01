@@ -184,7 +184,7 @@ async function run() {
             const result = await restaurantDB.find(query).sort({ purchase_amount: -1 }).toArray();
             res.send(result)
         })
-        //feedback
+                        //feedback
         app.post('/feedback', async (req, res) => {
             const newFeedback = req.body
             console.log(newFeedback);
@@ -238,8 +238,8 @@ async function run() {
                     // await client.db("admin").command({ ping: 1 });
         console.log("Pinged your deployment. You successfully connected to MongoDB!");
     } finally {
-        // Ensures that the client will close when you finish/error
-   
+             // Ensures that the client will close when you finish/error
+
     }
 }
 run().catch(console.dir);
